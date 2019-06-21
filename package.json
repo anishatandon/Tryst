@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bfg": "^0.3.0",
+    "brew": "0.0.8",
     "firebase": "^6.2.1",
+    "git-bfg": "^0.1.15",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
