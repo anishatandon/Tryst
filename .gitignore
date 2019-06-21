@@ -1,2 +1,4 @@
 node_modules/
 src/Firebase/firebase.js
+src/gcal.js
+src/gcal.html
