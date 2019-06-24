@@ -1,8 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Home from './Home';
 import Login from './Login';
-import SignUp from './SignUp';
+import SignUp from './SignUp/SignUp';
 import { 
     Switch, 
     BrowserRouter as Router, 
