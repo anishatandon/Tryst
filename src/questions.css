@@ -1,6 +1,20 @@
-body {
-  background-color: #fffeea;
+.body {
+  background-color: #65173A;
   color: black;
+}
+
+.header {
+  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif; 
+  font-size: 24px;
+  font-style: normal; 
+  font-variant: normal; 
+  font-weight: bold; 
+  line-height: 26px;
+}
+
+.logo {
+  width: 10px;
+  height: ;
 }
 .vertical-container {
   height: 300px;
