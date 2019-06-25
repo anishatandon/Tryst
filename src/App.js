@@ -1,27 +1,39 @@
+
 import React from 'react';
-import Home from './Home';
-import Login from './Login';
-import SignUp from './SignUp/SignUp';
-import { 
-    Switch, 
-    BrowserRouter as Router, 
-    Route 
- } from 'react-router-dom';
-import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-export class App extends React.Component{
+import Navigation from './Navigation';
+import LandingPage from './Home';
+import SignUpPage from './SignUp/SignUp';
+import SignInPage from './SignIn';
+import PasswordForgetPage from './PasswordForget';
+import HomePage from './Home';
+import AccountPage from './Account';
+import AdminPage from './Admin';
 
-  render() {
-    return (
-      <Router>
-        <Switch>
-          <Route path="/SignUp" component={SignUp} />
-          <Route path="/Login" component={Login} />
-          <Route path="/" component={Home} />
-        </Switch>
-      </Router>
-    )
-  }
-}
+import * as ROUTES from './constants/routes';
+import { withAuthentication } from './Session';
 
-export default App;
+const App = () => (
+  <Router>
+    <div>
+      <Navigation />
+
+      <hr />
+
+      <Route exact path={ROUTES.LANDING} component={LandingPage} />
+      <Route exact path={ROUTES.SIGN_UP} component={SignUpPage} />
+      <Route exact path={ROUTES.SIGN_IN} component={SignInPage} />
+      <Route
+        exact
+        path={ROUTES.PASSWORD_FORGET}
+        component={PasswordForgetPage}
+      />
+      <Route exact path={ROUTES.HOME} component={HomePage} />
+      <Route exact path={ROUTES.ACCOUNT} component={AccountPage} />
+      <Route exact path={ROUTES.ADMIN} component={AdminPage} />
+    </div>
+  </Router>
+);
+
+export default withAuthentication(App);
